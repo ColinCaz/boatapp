@@ -1,0 +1,7 @@
+<h2>List of boats</h2>
+<ul id="boats">
+    <li *ngFor="let boat of boats" routerLink="/read/{{boat.id}}">
+        <span class="badge">{{boat.id}}</span> {{boat.name}}
+    </li>
+</ul>
+<button routerLink="/create">Add a boat</button>

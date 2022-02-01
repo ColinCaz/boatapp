@@ -1,0 +1,74 @@
+h2{
+  color: #947EB0;
+  width: fit-content;
+  margin: 20px;
+}
+
+#boats {
+  margin: 20px;
+  list-style-type: none;
+  padding: 0;
+  width: 250px;
+}
+
+li {
+  cursor: pointer;
+  background-color: #333333;
+  color: #EFEFEF;
+  width: 250px;
+  height: 30px;
+  line-height: 25px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+li:hover {
+  background-color: #EFEFEF;
+  color: #333333;
+}
+
+li:active {
+  background-color: #F68E5F;
+  color: #333333;
+}
+
+.badge {
+  display: inline-block;
+  font-size: small;
+  color: #333333;
+  background-color:#F68E5F;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px 0 0 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button {
+  cursor: pointer;
+  background-color: #947EB0;
+  color: #EFEFEF;
+  border: none;
+  border-radius: 5px;
+  margin: 0px 20px;
+  padding: 5px 10px;
+  line-height: 20px;
+}
+
+button:hover{
+  background-color: #F68E5F;
+}
+
+button:active{
+  background-color: #EFEFEF;
+  color: #333333;
+}
+
+/*
+#EFEFEF;
+#333333;
+#A0D2DB;
+#F68E5F;
+#947EB0;
+*/
