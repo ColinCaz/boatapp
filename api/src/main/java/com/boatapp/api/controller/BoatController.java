@@ -2,6 +2,7 @@ package com.boatapp.api.controller;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,11 +18,13 @@ public class BoatController {
 	@Autowired
 	private BoatService boatService;
 
+	@CrossOrigin
 	@PostMapping("/boat")
 	public Boat createBoat(@RequestBody Boat boat) {
 		return boatService.saveBoat(boat);
 	}
 
+	@CrossOrigin
 	@GetMapping("/boat/{id}")
 	public Boat getBoat(@PathVariable("id") final Long id) {
 		Optional<Boat> boat = boatService.getBoat(id);
@@ -32,11 +35,13 @@ public class BoatController {
 		}
 	}
 
+	@CrossOrigin
 	@GetMapping("/boats")
 	public Iterable<Boat> getBoats() {
 		return boatService.getBoats();
 	}
 
+	@CrossOrigin
 	@PutMapping("/boat/{id}")
 	public Boat updateBoat(@PathVariable("id") final Long id, @RequestBody Boat boat) {
 		Optional<Boat> e = boatService.getBoat(id);
@@ -62,6 +67,7 @@ public class BoatController {
 		}
 	}
 
+	@CrossOrigin
 	@DeleteMapping("/boat/{id}")
 	public void deleteBoat(@PathVariable("id") final Long id) {
 		boatService.deleteBoat(id);
