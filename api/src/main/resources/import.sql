@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS boats;
  
-CREATE TABLE boats (id INT AUTO_INCREMENT  PRIMARY KEY, name VARCHAR(250) NOT NULL, description VARCHAR(250) NOT NULL, size INT NOT NULL);
+CREATE TABLE boats (id INT AUTO_INCREMENT  PRIMARY KEY, name VARCHAR(25) NOT NULL, description VARCHAR(500) NOT NULL, size INT NOT NULL);
  
-INSERT INTO boats (name, description, size) VALUES ('Boat1', 'The largest boat', 150), ('Boat2', 'The smallest boat', 10), ('Boat3', 'An intermediate boat', 50);
+INSERT INTO boats (name, description, size) VALUES ('Santa Maria', 'Alternatively "La Gallega", was the largest of the three Spanish boats used by Christopher Columbus in his first voyage across the Atlantic Ocean in 1492.', 24), ('Mayflower', 'English ship that transported a group of English families, known today as the Pilgrims, from England to the New World in 1620.', 33), ('Titanic', 'British passenger liner, operated by the White Star Line, which sank in the North Atlantic Ocean on 15 April 1912 after striking an iceberg during her maiden voyage from Southampton (UK) to New York City. Of the estimated 2.224 passengers and crew aboard, more than 1.500 died, which made the sinking possibly one of the deadliest for a single ship up to that time.', 269);
