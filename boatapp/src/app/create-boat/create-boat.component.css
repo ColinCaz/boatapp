@@ -1,0 +1,60 @@
+* {
+    color: #333333;
+}
+
+h2 {
+    color: #947EB0;
+    width: fit-content;
+    margin: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    font-size: medium;
+    border: none;
+    border-bottom: 2px solid #333333;
+}
+
+#name {
+    width: 10%;
+}
+
+#description {
+    width: 25%;
+}
+
+#size {
+    width: 3.5%;
+}
+
+div {
+    margin: 20px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #947EB0;
+    color: #EFEFEF;
+    border: none;
+    border-radius: 5px;
+    margin: 0px 0px 0px 20px;
+    padding: 5px 10px;
+    line-height: 20px;
+}
+  
+button:hover{
+    background-color: #F68E5F;
+}
+  
+button:active{
+    background-color: #EFEFEF;
+    color: #333333;
+}
+
+button:disabled{
+    background-color: lightgray;
+    color: darkgray;
+}

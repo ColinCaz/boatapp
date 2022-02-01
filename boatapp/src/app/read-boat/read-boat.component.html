@@ -1,0 +1,22 @@
+<div id="div" *ngIf="boat">
+    <h2>Boat's detail</h2>
+    <div>
+        <label for="id">ID: </label>
+        <span>{{boat.id}}</span>
+    </div>
+    <div>
+        <label for="name">Name: </label>
+        <span>{{boat.name}}</span>
+    </div>
+    <div>
+        <label for="description">Description: </label>
+        <span>{{boat.description}}</span>
+    </div>
+    <div>
+        <label for="size">Size: </label>
+        <span>{{boat.size}}</span>
+    </div>
+</div>
+<button (click)="goBack()">Go back</button>
+<button (click)="goUpdate()">Modify</button>
+<button (click)="delete()">Delete</button>

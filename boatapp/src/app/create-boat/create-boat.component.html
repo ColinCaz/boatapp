@@ -1,0 +1,17 @@
+<h2>Add a boat</h2>
+<form [formGroup]="form">
+<div>
+    <label for="name">Name: </label>
+    <input id="name" type="text" formControlName="name" placeholder="Name" />
+</div>
+<div>
+    <label for="description">Description: </label>
+    <input id="description" type="text" formControlName="description" placeholder="Description" />
+</div>
+<div>
+    <label for="size">Size: </label>
+    <input id="size" type="number" formControlName="size" placeholder="Size" />
+</div>
+</form>
+<button (click)="goBack()">Go back</button>
+<button type="submit" [title]="!form.valid?'You need to fill the form first':''" [disabled]="!form.valid" (click)="add()">Create</button>

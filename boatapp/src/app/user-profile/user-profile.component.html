@@ -1,0 +1,28 @@
+<div id="container">
+    <div id="left">
+        <h1 routerLink="/boats}">Boat App</h1>
+    </div>
+    <div id="right">
+        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+            <div *ngIf="auth.user$ | async as user">
+                <div id="connectedas">
+                    Connected as
+                </div>
+                <div id="img">
+                    <img src="{{ user.picture }}" alt="Profile picture"/>
+                </div>
+                <div id="name">
+                    <span>{{ user.name }}</span>
+                </div>
+                <div id="button">
+                    <button (click)="auth.logout({ returnTo: document.location.origin })">Log out</button>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #loggedOut>
+            <div id="button">
+                <button (click)="auth.loginWithRedirect()">Log in</button>
+            </div>
+        </ng-template>
+    </div>
+</div>
