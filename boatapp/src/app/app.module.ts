@@ -35,12 +35,6 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
       clientId: 'eghtyMT3WCzdWFOgxcyfAvwN1I0TUKgU'
     }),
     HttpClientModule,
-    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-    // and returns simulated server responses.
-    // Remove it when a real server is ready to receive requests.
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
     AppRoutingModule
   ],
   providers: [],

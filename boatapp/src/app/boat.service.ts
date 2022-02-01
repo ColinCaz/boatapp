@@ -9,7 +9,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class BoatService {
 
-  private boatsUrl = 'api/boats';
+  private boatsUrl = 'http://localhost:9000';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -30,23 +30,23 @@ export class BoatService {
   // à changer pour récupérer depuis l'api
 
   getBoats(): Observable<Boat[]> {
-    return this.http.get<Boat[]>(this.boatsUrl, this.httpOptions).pipe(catchError(this.handleError<Boat[]>('getBoats', [])));
+    return this.http.get<Boat[]>(this.boatsUrl+"/boats", this.httpOptions).pipe(catchError(this.handleError<Boat[]>('getBoats', [])));
   }
 
   addBoat(boat: Boat): Observable<Boat> {
-    return this.http.post<Boat>(this.boatsUrl, boat, this.httpOptions).pipe(catchError(this.handleError<Boat>('addBoat')));
+    return this.http.post<Boat>(this.boatsUrl+"/boat", boat, this.httpOptions).pipe(catchError(this.handleError<Boat>('addBoat')));
   }
 
   getBoat(id: number): Observable<Boat> {
-    return this.http.get<Boat>(this.boatsUrl+"/"+id, this.httpOptions).pipe(catchError(this.handleError<Boat>('getBoat id='+id)));
+    return this.http.get<Boat>(this.boatsUrl+"/boat/"+id, this.httpOptions).pipe(catchError(this.handleError<Boat>('getBoat id='+id)));
   }
 
   updateBoat(boat: Boat): Observable<Boat> {
-    return this.http.put<Boat>(this.boatsUrl, boat, this.httpOptions).pipe(catchError(this.handleError<Boat>('updateBoat')));
+    return this.http.put<Boat>(this.boatsUrl+"/boat/"+boat.id, boat, this.httpOptions).pipe(catchError(this.handleError<Boat>('updateBoat')));
   }
 
   deleteBoat(id: number): Observable<Boat> {
-    return this.http.delete<Boat>(this.boatsUrl+"/"+id, this.httpOptions).pipe(catchError(this.handleError<Boat>('deleteBoat id='+id)));
+    return this.http.delete<Boat>(this.boatsUrl+"/boat/"+id, this.httpOptions).pipe(catchError(this.handleError<Boat>('deleteBoat id='+id)));
   }
 
   constructor(private http: HttpClient) { }
